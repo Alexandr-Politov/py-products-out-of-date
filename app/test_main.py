@@ -10,7 +10,8 @@ from app.main import outdated_products
     [
         pytest.param(
             [{"name": "salmon", "expiration_date": datetime.date(2022, 2, 1)}],
-            ["salmon"], id="if expiration date equals yesterday product is outdated"),
+            ["salmon"], id="if expiration date "
+                           "equals yesterday product is outdated"),
         pytest.param(
             [{"name": "salmon", "expiration_date": datetime.date(2022, 2, 2)}],
             [], id="if expiration date equals today product is not outdated")
